@@ -6,5 +6,13 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: []
-}
+  plugins: [{
+    use: '@gridsome/source-filesystem',
+    options: {
+      baseDir: './content',
+      path: 'projets/*.md',
+      typeName: 'Projet',
+    }
+  },
+  ]
+};
