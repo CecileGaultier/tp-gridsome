@@ -27,6 +27,18 @@ type Metadata {
     siteUrl: String
 }
 
+type NodeBelongsTo implements NodeConnection {
+    edges: [NodeBelongsToEdge]
+    pageInfo: PageInfo!
+    totalCount: Int!
+}
+
+type NodeBelongsToEdge implements NodeConnectionEdge {
+    next: Node
+    node: Node
+    previous: Node
+}
+
 type Page {
     context: JSON!
     path: String!
@@ -43,14 +55,93 @@ type PageInfo {
     totalPages: Int!
 }
 
+type Projet implements Node {
+    belongsTo(
+        filter: BelongsToFilterInput,
+        limit: Int,
+        order: SortOrder = DESC,
+        page: Int,
+        "Defaults to 25 when page is provided."
+        perPage: Int,
+        skip: Int = 0,
+        sort: [SortArgument!],
+        sortBy: String = "date"
+    ): NodeBelongsTo
+    content: String
+    date(
+        "Date format"
+        format: String,
+        "Locale"
+        locale: String
+    ): Date
+    excerpt(
+        "Maximum length of generated excerpt (characters)"
+        length: Int = 200
+    ): String
+    fileInfo: Projet_FileInfo
+    headings(depth: RemarkHeadingLevels, stripTags: Boolean = true): [RemarkHeading]
+    id: ID!
+    imageURL: String
+    path(to: String = "default"): String
+    tag: [String]
+    timeToRead(
+        "Words per minute"
+        speed: Int = 230
+    ): Int
+    title: String
+}
+
+type ProjetConnection implements NodeConnection {
+    edges: [ProjetEdge]
+    pageInfo: PageInfo!
+    totalCount: Int!
+}
+
+type ProjetEdge implements NodeConnectionEdge {
+    next: Projet
+    node: Projet
+    previous: Projet
+}
+
+type Projet_FileInfo {
+    directory: String
+    extension: String
+    name: String
+    path: String
+}
+
 type Query {
     allPage(
         "Filter pages."
         filter: PageFilterInput
     ): [Page]
+    allProjet(
+        "Filter for Projet nodes."
+        filter: ProjetFilterInput,
+        limit: Int,
+        order: SortOrder = DESC,
+        page: Int,
+        "Defaults to 25 when page is provided."
+        perPage: Int,
+        skip: Int = 0,
+        sort: [SortArgument],
+        sortBy: String = "date"
+    ): ProjetConnection
     metaData: Metadata @deprecated(reason : "Use Query.metadata instead.")
     metadata: Metadata
     page(path: String!): Page
+    projet(
+        id: ID,
+        "Will return an error if not nullable."
+        nullable: Boolean = false,
+        path: String
+    ): Projet
+}
+
+type RemarkHeading {
+    anchor: String
+    depth: Int
+    value: String
 }
 
 enum ImageFit {
@@ -66,11 +157,68 @@ enum ImageFit {
     outside
 }
 
+enum RemarkHeadingLevels {
+    h1
+    h2
+    h3
+    h4
+    h5
+    h6
+}
+
 enum SortOrder {
     "Sort ascending"
     ASC
     "Sort descending"
     DESC
+}
+
+enum TypeName {
+    Projet
+}
+
+input BelongsToFilterInput {
+    id: IDQueryOperatorInput
+    path: StringQueryOperatorInput
+    typeName: TypeNameQueryOperatorInput
+}
+
+input DateQueryOperatorInput {
+    "Filter by property between provided values."
+    between: [Date]
+    "Filter by date property equal to provided date value."
+    dteq: Date
+    "Filter by property of (strict) equality."
+    eq: Date
+    "Filter nodes that contain the field, including nodes where the field value is null."
+    exists: Boolean
+    "Filter by property greater than provided value."
+    gt: Date
+    "Filter by property greater or equal to provided value."
+    gte: Date
+    "Filter by property matching any of the provided values."
+    in: [Date]
+    "Filter by property less than provided value."
+    lt: Date
+    "Filter by property less than or equal to provided value."
+    lte: Date
+    "Filter by property not equal to provided value."
+    ne: Date
+    "Filter by property not matching any of the provided values."
+    nin: [Date]
+}
+
+input IDQueryOperatorInput {
+    "Filter by property of (strict) equality."
+    eq: ID
+    "Filter nodes that contain the field, including nodes where the field value is null."
+    exists: Boolean
+    "Filter by property matching any of the provided values."
+    in: [ID]
+    "Filter by property not equal to provided value."
+    ne: ID
+    "Filter by property not matching any of the provided values."
+    nin: [ID]
 }
 
 input JSONQueryOperatorInput {
@@ -93,9 +241,39 @@ input PageFilterInput {
     path: StringQueryOperatorInput
 }
 
+input ProjetFilterInput {
+    content: StringQueryOperatorInput
+    date: DateQueryOperatorInput
+    excerpt: StringQueryOperatorInput
+    fileInfo: Projet_FileInfoFilterInput
+    id: IDQueryOperatorInput
+    imageURL: StringQueryOperatorInput
+    path: StringQueryOperatorInput
+    tag: StringListQueryOperatorInput
+    title: StringQueryOperatorInput
+}
+
+input Projet_FileInfoFilterInput {
+    directory: StringQueryOperatorInput
+    extension: StringQueryOperatorInput
+    name: StringQueryOperatorInput
+    path: StringQueryOperatorInput
+}
+
 input SortArgument {
     by: String! = "date"
     order: SortOrder = DESC
+}
+
+input StringListQueryOperatorInput {
+    "Filter by property containing the provided value."
+    contains: [String]
+    "Filter by property containing any of the provided values."
+    containsAny: [String]
+    "Filter by property containing none of the provided values."
+    containsNone: [String]
+    "Filter which have an array property of specified size."
+    size: Int
 }
 
 input StringQueryOperatorInput {
@@ -113,11 +291,24 @@ input StringQueryOperatorInput {
     regex: String
 }
 
+input TypeNameQueryOperatorInput {
+    "Filter by property of (strict) equality."
+    eq: TypeName
+    "Filter nodes that contain the field, including nodes where the field value is null."
+    exists: Boolean
+    "Filter by property matching any of the provided values."
+    in: [TypeName]
+    "Filter by property not equal to provided value."
+    ne: TypeName
+    "Filter by property not matching any of the provided values."
+    nin: [TypeName]
+}
+
+
+scalar Date
 
 "The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)."
 scalar JSON
-
-scalar Date
 
 scalar File
 
