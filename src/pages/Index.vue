@@ -25,6 +25,22 @@
     </p>
 
 
+    <div class="container">
+      <div class="row">
+        <div class="col-5">
+          <p>
+            Les pratiquants sont nommés globalement « surfeurs » ou « surfers » (ou exceptionnellement aquaplanchistes[réf. nécessaire]4), sans distinction pour le niveau ou le type de pratique. D'autres termes plus spécifiques existent, comme shortboarder, bodyboardeur, longboardeur, bodysurfeur, etc.
+          </p>
+        </div>
+
+        <div class="col-5">
+          <p>
+            Les pratiquants sont nommés globalement « surfeurs » ou « surfers » (ou exceptionnellement aquaplanchistes[réf. nécessaire]4), sans distinction pour le niveau ou le type de pratique. D'autres termes plus spécifiques existent, comme shortboarder, bodyboardeur, longboardeur, bodysurfeur, etc.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <g-image alt="surf 2" src="~/surf2.jpg" />
 
     <div>
