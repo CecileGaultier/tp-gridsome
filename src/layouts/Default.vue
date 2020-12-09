@@ -58,6 +58,12 @@ p{
   font-family: "Quicksand",sans-serif;
 }
 
+img{
+  max-width: 600px;
+  display: block;
+  margin: 2rem auto;
+}
+
 .title:hover{
   color: white;
   text-decoration: none;

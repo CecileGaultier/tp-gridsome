@@ -1,21 +1,21 @@
 <template>
     <Layout>
         <div class="projet">
-            <h1 class="text-center">{{$page.projet.title}}</h1>
-            <div class="content m-3" v-html="$page.projet.content"></div>
-            <div class="container my-5">
-                <div class="row">
-                    <div class="col-7">
-                        <p><img :src="$page.projet.imageURL" class="img-fluid" alt=""></p>
-                    </div>
-                    <div class="col-5">
+            <h1>{{$page.projet.title}}</h1>
+            <div class="content" v-html="$page.projet.content"></div>
+            <b-container>
+                <b-row>
+                    <b-col cols="7">
+                        <p><img :src="$page.projet.imageURL" alt=""></p>
+                    </b-col>
+                    <b-col cols="5">
                         <p><time>Date : {{ this.$page.projet.date }}</time></p>
                         <ul>
-                            <li v-for="tag of $page.projet.tag" :key="tag" class="link">{{tag}}</li>
+                            <li v-for="tag of $page.projet.tag" :key="tag" class="tag">{{tag}}</li>
                         </ul>
-                    </div>
-                </div>
-            </div>
+                    </b-col>
+                </b-row>
+            </b-container>
 
         </div>
     </Layout>
@@ -51,13 +51,12 @@
         list-style: none;
     }
 
-    .link {
+    .tag {
         margin : 20px auto;
-        display: block;
         text-align: center;
         color: white;
         text-decoration: none;
-        background-color: #3ACDC6;
+        background-color: #0C9FAD;
         padding: 1rem;
         border-radius: .8rem;
         list-style: none;
