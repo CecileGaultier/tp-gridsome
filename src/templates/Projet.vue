@@ -4,7 +4,7 @@
         <p><img :src="$page.projet.imageURL" width="100" alt=""></p>
         <p><time>Date : {{ this.$page.projet.date }}</time></p>
         <ul>
-            <li v-for="tag of $page.projet.tag" :key="tag">{{tag}}</li>
+            <li v-for="tag of $page.projet.tag" :key="tag" class="link">{{tag}}</li>
         </ul>
         <div class="content" v-html="$page.projet.content"></div>
     </div>
@@ -32,3 +32,23 @@
         }
     }
 </script>
+
+<style>
+
+    li {
+        list-style: none;
+    }
+
+    .link {
+        margin : 20px auto;
+        display: block;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        background-color: #3ACDC6;
+        padding: 1rem;
+        border-radius: .8rem;
+        list-style: none;
+
+    }
+</style>

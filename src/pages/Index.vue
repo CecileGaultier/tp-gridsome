@@ -10,7 +10,7 @@
     </p>
 
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="surf" src="~/surf.jpg" />
+    <g-image alt="surf" src="~/surf.jpg" class="img-fluid" />
 
     <p>
       Au sens plus moderne, le surf est aussi une discipline sportive codifiée à la fin du XXe siècle, un sport individuel pratiqué debout sur une planche courte (shortboard), par opposition à toutes les autres disciplines de glisse sur les vagues comme le longboard, le bodyboard, le bodysurf, le skimboard, le stand up paddle, le windsurf.
@@ -20,9 +20,7 @@
       Le surf se pratique sur des sites de surf, appelés « spots », plages qui sont baignées par des vagues plus ou moins grandes et propices à la glisse.
     </p>
 
-    <p>
-      Les pratiquants sont nommés globalement « surfeurs » ou « surfers » (ou exceptionnellement aquaplanchistes[réf. nécessaire]4), sans distinction pour le niveau ou le type de pratique. D'autres termes plus spécifiques existent, comme shortboarder, bodyboardeur, longboardeur, bodysurfeur, etc.
-    </p>
+
 
 
     <div class="container">
@@ -34,14 +32,11 @@
         </div>
 
         <div class="col-5">
-          <p>
-            Les pratiquants sont nommés globalement « surfeurs » ou « surfers » (ou exceptionnellement aquaplanchistes[réf. nécessaire]4), sans distinction pour le niveau ou le type de pratique. D'autres termes plus spécifiques existent, comme shortboarder, bodyboardeur, longboardeur, bodysurfeur, etc.
-          </p>
+          <g-image alt="surf 2" src="~/surf2.jpg" class="img-fluid" />
         </div>
       </div>
     </div>
 
-    <g-image alt="surf 2" src="~/surf2.jpg" />
 
     <div>
       <p class="home-links">
@@ -69,9 +64,7 @@ export default {
 .home-links a {
   margin-right: 1rem;
 }
-img{
-    max-width: 760px;
-}
+
 .link {
   margin : 20px auto;
   display: block;
@@ -81,5 +74,11 @@ img{
   background-color: #3ACDC6;
   padding: 1rem;
   border-radius: .8rem;
+}
+
+.link:hover{
+  color: white;
+  text-decoration: none;
+
 }
 </style>

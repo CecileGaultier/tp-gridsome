@@ -5,6 +5,17 @@
   </Layout>
 </template>
 
+<page-query>
+  query ($id: ID!) {
+    projet(id: $id) {
+      title
+      imageURL
+      date(format: "DD MMMM YYYY", locale: "fr")
+      tag
+      content
+    }
+  }
+</page-query>
 <script>
 export default {
   metaInfo: {

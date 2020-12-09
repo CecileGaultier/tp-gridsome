@@ -58,6 +58,12 @@ p{
   font-family: "Quicksand",sans-serif;
 }
 
+.title:hover{
+  color: white;
+  text-decoration: none;
+
+}
+
 .title{
   color: white;
   text-decoration: none;
@@ -65,6 +71,12 @@ p{
 }
 
 .nav__link {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav__link:hover {
   margin-left: 20px;
   color: white;
   text-decoration: none;
