@@ -3,8 +3,9 @@ title: Le coaching, un art de vivre !
 imageURL: https://cdn-image.departures.com/sites/default/files/1557159948/hawaii-surfing-sport-pacific-ocean-usa-HAWAIISURF0519.jpg
 date: 2020-08-12
 tag:
-  - surf
-  - solo
+  - teach
+  - coach
+
 ---
 
 

@@ -1,13 +1,25 @@
 <template>
-    <div class="projet">
-        <h1>{{$page.projet.title}}</h1>
-        <p><img :src="$page.projet.imageURL" width="100" alt=""></p>
-        <p><time>Date : {{ this.$page.projet.date }}</time></p>
-        <ul>
-            <li v-for="tag of $page.projet.tag" :key="tag" class="link">{{tag}}</li>
-        </ul>
-        <div class="content" v-html="$page.projet.content"></div>
-    </div>
+    <Layout>
+        <div class="projet">
+            <h1 class="text-center">{{$page.projet.title}}</h1>
+            <div class="content m-3" v-html="$page.projet.content"></div>
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-5">
+                        <p><img :src="$page.projet.imageURL" class="img-fluid" alt=""></p>
+                    </div>
+                    <div class="col-5">
+                        <p><time>Date : {{ this.$page.projet.date }}</time></p>
+                        <ul>
+                            <li v-for="tag of $page.projet.tag" :key="tag" class="link">{{tag}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </Layout>
+
 </template>
 
 <page-query>
