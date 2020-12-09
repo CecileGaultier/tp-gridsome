@@ -8,7 +8,7 @@
       <nav class="nav">
         <g-link class="nav__link" to="/">Accueil</g-link>
         <g-link class="nav__link" to="/about/">À propos</g-link>
-        <g-link class="nav__link" to="/projets/">Projets</g-link>
+        <g-link class="nav__link" to="/projets/">Articles</g-link>
 
       </nav>
     </header>

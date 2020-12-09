@@ -2,6 +2,8 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "popper.js/dist/popper";
+import "popper.js/dist/popper-utils";
 
 import DefaultLayout from '~/layouts/Default.vue'
 

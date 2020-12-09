@@ -5,7 +5,7 @@
             <div class="content m-3" v-html="$page.projet.content"></div>
             <div class="container my-5">
                 <div class="row">
-                    <div class="col-5">
+                    <div class="col-7">
                         <p><img :src="$page.projet.imageURL" class="img-fluid" alt=""></p>
                     </div>
                     <div class="col-5">

@@ -1,8 +1,8 @@
 <template>
   <Layout>
-    <h1>Liste des projets</h1>
+    <h1>Liste des articles</h1>
     <p>
-      Retrouvez tous les projets de surfing !
+      Retrouvez tous les articles de surfing !
     </p>
     <ul>
       <li v-for="{node:projet} of $page.allProjet.edges" :key="projet.id">
