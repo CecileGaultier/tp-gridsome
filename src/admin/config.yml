@@ -29,5 +29,5 @@ collections:
         value_type: "int"
         min: 1
         max: 101
-      - { label: 'Harmonie colorée', name: 'color', widget: 'color' }
+      - { label: 'Tendance', name: 'color', widget: 'color' }
 
