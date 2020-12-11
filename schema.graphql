@@ -82,6 +82,7 @@ type Projet implements Node {
     headings(depth: RemarkHeadingLevels, stripTags: Boolean = true): [RemarkHeading]
     id: ID!
     imageURL: String
+    like: Int
     path(to: String = "default"): String
     tag: [String]
     timeToRead(
@@ -221,6 +222,29 @@ input IDQueryOperatorInput {
     nin: [ID]
 }
 
+input IntQueryOperatorInput {
+    "Filter by property between provided values."
+    between: [Int]
+    "Filter by property of (strict) equality."
+    eq: Int
+    "Filter nodes that contain the field, including nodes where the field value is null."
+    exists: Boolean
+    "Filter by property greater than provided value."
+    gt: Int
+    "Filter by property greater or equal to provided value."
+    gte: Int
+    "Filter by property matching any of the provided values."
+    in: [Int]
+    "Filter by property less than provided value."
+    lt: Int
+    "Filter by property less than or equal to provided value."
+    lte: Int
+    "Filter by property not equal to provided value."
+    ne: Int
+    "Filter by property not matching any of the provided values."
+    nin: [Int]
+}
+
 input JSONQueryOperatorInput {
     "Filter by property of (strict) equality."
     eq: JSON
@@ -248,6 +272,7 @@ input ProjetFilterInput {
     fileInfo: Projet_FileInfoFilterInput
     id: IDQueryOperatorInput
     imageURL: StringQueryOperatorInput
+    like: IntQueryOperatorInput
     path: StringQueryOperatorInput
     tag: StringListQueryOperatorInput
     title: StringQueryOperatorInput

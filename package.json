@@ -20,5 +20,18 @@
     "@gridsome/transformer-remark": "^0.6.4",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "netlify-cms": "^2.10.73"
-  }
+  },
+  "description": "This is the project you get when you run `gridsome create new-project`.",
+  "version": "1.0.0",
+  "main": "gridsome.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CecileGaultier/tp-gridsome.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CecileGaultier/tp-gridsome/issues"
+  },
+  "homepage": "https://github.com/CecileGaultier/tp-gridsome#readme"
 }

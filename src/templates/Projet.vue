@@ -9,6 +9,7 @@
                         <p><img :src="$page.projet.imageURL" alt=""></p>
                     </b-col>
                     <b-col cols="5">
+                        <p>Like : {{ this.$page.projet.like }}</p>
                         <p><time>Date : {{ this.$page.projet.date }}</time></p>
                         <ul>
                             <li v-for="tag of $page.projet.tag" :key="tag" class="tag">{{tag}}</li>
@@ -30,6 +31,7 @@
             date(format: "DD MMMM YYYY", locale: "fr")
             tag
             content
+            like
         }
     }
 </page-query>
