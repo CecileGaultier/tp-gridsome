@@ -10,6 +10,17 @@
     <p>
       L'ISA organise le World Championship événement qualificatif aux Jeux olympiques.
     </p>
+
+    <g-image alt="surf" src="https://upload.wikimedia.org/wikipedia/fr/thumb/f/f9/Logotype_ISA.svg/1200px-Logotype_ISA.svg.png" class="img-fluid" />
+
+    <div>
+      <p class="home-links">
+        <g-link class="link" to="/projets/">Projets</g-link>
+        <g-link class="link" to="/projets/assoc/">Association</g-link>
+      </p>
+    </div>
+
+
   </Layout>
 </template>
 
