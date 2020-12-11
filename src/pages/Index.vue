@@ -41,7 +41,7 @@
     <div>
       <p class="home-links">
         <g-link class="link" to="/about/">À propos</g-link>
-        <g-link class="link" to="/projets/">Projets</g-link>
+        <g-link class="link" to="/projets/">Articles</g-link>
       </p>
     </div>
 

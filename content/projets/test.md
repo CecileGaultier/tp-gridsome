@@ -1,6 +1,6 @@
 ---
 title: Spots de surf
-imageURL: https://images.photowall.com/products/45548/surfing.jpg?h=699&q=85
+imageURL: https://img.aws.la-croix.com/2018/12/30/1200992381/etude-evoque-diminution-hauteur-moyenne-vagues-lhorizon-2100_0_1399_932.jpg
 date: 2020-01-07
 tag:
   - Spot
