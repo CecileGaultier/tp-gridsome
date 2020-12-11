@@ -7,6 +7,14 @@ tag:
   - solo
 like: 9
 color: "#4cc338"
+auteur:
+  birthdate: 02/09/2009
+  public: true
+  name: Cécile Gaultier
+  address:
+    street: 9 RUE DU FOYER
+    city: BELFORT
+    post-code: "90000"
 ---
 
 
