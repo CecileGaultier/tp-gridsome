@@ -7,6 +7,14 @@ tag:
   - coach
 like: 28
 color: "#ffb800"
+auteur:
+  birthdate: 06/08/2020
+  public: true
+  name: Alex
+  address:
+    street: 8 rue de la Liberté
+    city: Colmar
+    post-code: "68000"
 ---
 
 
