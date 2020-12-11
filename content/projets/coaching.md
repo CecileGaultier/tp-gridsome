@@ -6,7 +6,7 @@ tag:
   - teach
   - coach
 like: 3
-color: "#ea9292"
+color: "#51b930"
 ---
 
 
