@@ -6,7 +6,7 @@ tag:
   - surf
   - solo
 like: 9
-color: "#e29393"
+color: "#4cc338"
 ---
 
 
