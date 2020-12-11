@@ -41,7 +41,7 @@ collections:
             name: "birthdate"
             widget: "date"
             default: ""
-            format: "MM/DD/YYYY"
+            format: "DD/MM/YYYY"
           - label: "Address"
             name: "address"
             widget: "object"
