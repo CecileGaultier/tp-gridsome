@@ -32,6 +32,7 @@
             tag
             content
             like
+            color
         }
     }
 </page-query>

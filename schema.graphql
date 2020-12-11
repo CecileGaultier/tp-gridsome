@@ -67,6 +67,7 @@ type Projet implements Node {
         sort: [SortArgument!],
         sortBy: String = "date"
     ): NodeBelongsTo
+    color: String
     content: String
     date(
         "Date format"
@@ -266,6 +267,7 @@ input PageFilterInput {
 }
 
 input ProjetFilterInput {
+    color: StringQueryOperatorInput
     content: StringQueryOperatorInput
     date: DateQueryOperatorInput
     excerpt: StringQueryOperatorInput
