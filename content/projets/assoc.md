@@ -1,11 +1,12 @@
 ---
-title: Les associations, une passion 
+title: Les associations, une passion
 imageURL: https://upload.wikimedia.org/wikipedia/fr/thumb/f/f9/Logotype_ISA.svg/1200px-Logotype_ISA.svg.png
 date: 2019-08-12
 tag:
   - teach
   - coach
 like: 28
+color: "#ffb800"
 ---
 
 
