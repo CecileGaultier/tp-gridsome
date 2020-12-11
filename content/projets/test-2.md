@@ -8,6 +8,14 @@ tag:
   - Surf
 like: 36
 color: "#e65252"
+auteur:
+  birthdate: 12/02/2020
+  name: Marc
+  address:
+    street: 32 faubourg de lyon
+    city: Belfort
+    post-code: "90000"
+  public: true
 ---
 
 
