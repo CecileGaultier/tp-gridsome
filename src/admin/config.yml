@@ -50,4 +50,11 @@ collections:
               - {label: "Street Address", name: "street", widget: "string"}
               - {label: "City", name: "city", widget: "string"}
               - {label: "Postal Code", name: "post-code", widget: "string"}
+          - label: "Image auteur"
+            name: "profil"
+            widget: "image"
+            default: "https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331257__340.png"
+            media_library:
+              config:
+                multiple: true
 

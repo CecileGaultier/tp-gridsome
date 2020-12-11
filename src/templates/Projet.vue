@@ -16,9 +16,9 @@
                 <div>
                     <div class="auteur">
                         <p><b>Auteur</b> : </p>
-                        <p> {{ this.$page.projet.auteur.name }}|</p>
-                        <p> {{ this.$page.projet.auteur.birthdate }}|</p>
-                        <p> {{ this.$page.projet.auteur.address.city }}|</p>
+                        <p> {{ this.$page.projet.auteur.name }} |</p>
+                        <p> {{ this.$page.projet.auteur.birthdate }} |</p>
+                        <p> {{ this.$page.projet.auteur.address.city }}</p>
                     </div>
 
                 </div>
@@ -67,6 +67,7 @@
 
     .auteur p{
         display: inline;
+        margin-bottom: 2rem;
     }
 
     ul{
