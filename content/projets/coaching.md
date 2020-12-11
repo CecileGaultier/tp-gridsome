@@ -7,6 +7,14 @@ tag:
   - coach
 like: 3
 color: "#51b930"
+auteur:
+  birthdate: 07/06/2011
+  name: Tania
+  public: true
+  address:
+    street: 20 rue de la Colombe
+    city: Colmar
+    post-code: "68000"
 ---
 
 
