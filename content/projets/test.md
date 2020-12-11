@@ -7,6 +7,14 @@ tag:
   - Surf
 like: 50
 color: "#de0707"
+auteur:
+  birthdate: 02/02/1981
+  public: true
+  name: Jean-Charles
+  address:
+    street: 9 RUE DU FOYER
+    city: BELFORT
+    post-code: "90000"
 ---
 
 
