@@ -15,6 +15,7 @@ auteur:
     street: 8 rue de la Liberté
     city: Colmar
     post-code: "68000"
+  profil: /uploads/abby-savage-pikx8qpbfgu-unsplash.jpg
 ---
 
 
