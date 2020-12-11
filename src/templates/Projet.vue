@@ -33,7 +33,15 @@
             content
             like
             color
-            auteur
+            auteur{
+                name
+                birthdate
+                address{
+                    street
+                    city
+                    post_code
+                }
+            }
         }
     }
 </page-query>

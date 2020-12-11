@@ -19,7 +19,7 @@ collections:
         name: "tag"
         widget: "select"
         multiple: true
-        options: [ "html", "css", "javascript" ]
+        options: [ "vague", "coach", "surf", "spot" ]
         default: [ "html" ]
       - {label: "Body", name: "body", widget: "markdown"}
       - label: "Like"
