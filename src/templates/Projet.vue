@@ -33,6 +33,7 @@
             content
             like
             color
+            auteur
         }
     }
 </page-query>

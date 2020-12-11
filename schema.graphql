@@ -56,6 +56,7 @@ type PageInfo {
 }
 
 type Projet implements Node {
+    auteur: Projet_Auteur
     belongsTo(
         filter: BelongsToFilterInput,
         limit: Int,
@@ -103,6 +104,19 @@ type ProjetEdge implements NodeConnectionEdge {
     next: Projet
     node: Projet
     previous: Projet
+}
+
+type Projet_Auteur {
+    address: Projet_Auteur_Address
+    birthdate: String
+    name: String
+    public: Boolean
+}
+
+type Projet_Auteur_Address {
+    city: String
+    post_code: String
+    street: String
 }
 
 type Projet_FileInfo {
@@ -183,6 +197,19 @@ input BelongsToFilterInput {
     id: IDQueryOperatorInput
     path: StringQueryOperatorInput
     typeName: TypeNameQueryOperatorInput
+}
+
+input BooleanQueryOperatorInput {
+    "Filter by property of (strict) equality."
+    eq: Boolean
+    "Filter nodes that contain the field, including nodes where the field value is null."
+    exists: Boolean
+    "Filter by property matching any of the provided values."
+    in: [Boolean]
+    "Filter by property not equal to provided value."
+    ne: Boolean
+    "Filter by property not matching any of the provided values."
+    nin: [Boolean]
 }
 
 input DateQueryOperatorInput {
@@ -267,6 +294,7 @@ input PageFilterInput {
 }
 
 input ProjetFilterInput {
+    auteur: Projet_AuteurFilterInput
     color: StringQueryOperatorInput
     content: StringQueryOperatorInput
     date: DateQueryOperatorInput
@@ -278,6 +306,19 @@ input ProjetFilterInput {
     path: StringQueryOperatorInput
     tag: StringListQueryOperatorInput
     title: StringQueryOperatorInput
+}
+
+input Projet_AuteurFilterInput {
+    address: Projet_Auteur_AddressFilterInput
+    birthdate: StringQueryOperatorInput
+    name: StringQueryOperatorInput
+    public: BooleanQueryOperatorInput
+}
+
+input Projet_Auteur_AddressFilterInput {
+    city: StringQueryOperatorInput
+    post_code: StringQueryOperatorInput
+    street: StringQueryOperatorInput
 }
 
 input Projet_FileInfoFilterInput {
